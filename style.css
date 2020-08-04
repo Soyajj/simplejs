@@ -1,0 +1,84 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+#main{
+    border-radius: 1em;
+    margin-top: 50px;
+    background-color: white;
+    width: 35%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3);
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fname-error, .email-error, .lname-error{
+    color: red;
+    height: 15px;
+    text-align: center;
+}
+
+
+li{
+    padding-left: 10px;
+    height: 35px;
+    width: 90%;
+    background-color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.close{
+    cursor: pointer;
+    float: right;
+    background-color: black;
+    height: 35px;
+    width: 80px;
+    color: white;
+    text-align: center;
+
+}
+
+.close:hover{
+    background-color: red;
+    transition: 0.2s;
+}
+
+#btn {
+    height: 35px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: seagreen;
+    border: none;
+    color: white;
+    margin-top: 5px;
+    border-radius: 2em;
+}
+
+input{
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 2em;
+    width: 100%;
+}
+
+ol{
+    text-align: center  ;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3);
+    width: 50%;
+    border-radius: 1em;
+}
+
+#btn:hover{
+    cursor: pointer;
+    font-size : 1.1rem;
+    transition: 0.2s;
+}
