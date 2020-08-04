@@ -52,8 +52,8 @@ function add(){
     fname.value = '';
     lname.value = '';
     email.value = '';
-    close.addEventListener('click', function(r){
+    close.onclick = function(){
         li.remove();
-    });
+    };
     
 }
