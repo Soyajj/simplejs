@@ -49,8 +49,9 @@ function add(){
     edit.classList.add('edit');
     let data = [fname.value, lname.value, email.value];
     li.appendChild(document.createTextNode(data));
-    close.appendChild(document.createTextNode('Delete'));
+
     edit.appendChild(document.createTextNode('Edit'));
+    close.appendChild(document.createTextNode('Delete'));
     users.appendChild(li);
     li.appendChild(close);
     li.appendChild(edit);
@@ -67,7 +68,11 @@ function add(){
         const newemail = prompt("Enter new email")
         let newdata = [newfname,newlname,newemail]
         let newdataentry = document.createTextNode(newdata)
+        if(newfname === '' || newlname === '' || newemail ===''){
+            alert("Please fill in all the values")
+        }
+        else{
         li.replaceChild(newdataentry,li.childNodes[0])
-
+        }
     }
 }
