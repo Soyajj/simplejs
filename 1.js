@@ -1,7 +1,7 @@
 const body = document.querySelector('#body');
 const main = document.querySelector('#main');
 const myform = document.querySelector('#myform')
-const ul = document.querySelector('ul')
+const ul = document.querySelector('ul');
 
 const fname = document.querySelector('#fname');
 const lname = document.querySelector('#lname');
@@ -66,9 +66,9 @@ function add(){
     };
     edit.onclick = function(){
             btn.classList.toggle('btn-remove')
-            fname.value = data[0]
-            lname.value = data[1]
-            email.value = data[2]
+            fname.value = data[0];
+            lname.value = data[1];
+            email.value = data[2];
             save.classList.toggle('btn');
             save.onclick = function(){
                 const newdata = document.createTextNode(`${fname.value},${lname.value},${email.value}`);
@@ -77,7 +77,7 @@ function add(){
                 fname.value = '';
                 lname.value = '';
                 email.value = '';   
-                btn.classList.toggle('btn-remove')         
+                btn.classList.toggle('btn-remove');      
             }
     }
 }
