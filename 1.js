@@ -44,16 +44,30 @@ function onsubmit(s){
 function add(){
     const li = document.createElement('li');
     const close = document.createElement('div');
+    const edit = document.createElement('div');
     close.classList.add('close');
-    li.appendChild(document.createTextNode(`${fname.value} | ${lname.value} | ${email.value}`));
-    close.appendChild(document.createTextNode('Delete'))
+    edit.classList.add('edit');
+    let data = [fname.value, lname.value, email.value];
+    li.appendChild(document.createTextNode(data));
+    close.appendChild(document.createTextNode('Delete'));
+    edit.appendChild(document.createTextNode('Edit'));
     users.appendChild(li);
     li.appendChild(close);
+    li.appendChild(edit);
     fname.value = '';
     lname.value = '';
     email.value = '';
+
     close.onclick = function(){
         li.remove();
     };
-    
+    edit.onclick = function(){
+        const newfname = prompt("Enter new firstname")
+        const newlname = prompt("Enter new lastname")
+        const newemail = prompt("Enter new email")
+        let newdata = [newfname,newlname,newemail]
+        let newdataentry = document.createTextNode(newdata)
+        li.replaceChild(newdataentry,li.childNodes[0])
+
+    }
 }

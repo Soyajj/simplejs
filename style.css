@@ -82,3 +82,13 @@ ol{
     font-size : 1.1rem;
     transition: 0.2s;
 }
+
+.edit{
+    cursor: pointer;
+    background-color: gray;
+    float: right;
+    height: 35px;
+    width: 80px;
+    color: white;
+    text-align: center;
+}
