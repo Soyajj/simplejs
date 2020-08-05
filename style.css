@@ -27,6 +27,7 @@ body{
 
 
 li{
+    list-style-type: none;
     padding-left: 10px;
     height: 35px;
     width: 90%;
@@ -70,7 +71,7 @@ input{
     width: 100%;
 }
 
-ol{
+ul{
     text-align: center  ;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3);
     width: 50%;
