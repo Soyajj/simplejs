@@ -63,16 +63,23 @@ function add(){
         li.remove();
     };
     edit.onclick = function(){
-        const newfname = prompt("Enter new firstname")
-        const newlname = prompt("Enter new lastname")
-        const newemail = prompt("Enter new email")
-        let newdata = [newfname,newlname,newemail]
-        let newdataentry = document.createTextNode(newdata)
-        if(newfname === '' || newlname === '' || newemail ===''){
-            alert("Please fill in all the values")
-        }
-        else{
-        li.replaceChild(newdataentry,li.childNodes[0])
-        }
+            // const newfname = prompt("Enter new firstname")
+            // const newlname = prompt("Enter new lastname")
+            // const newemail = prompt("Enter new email")
+            // let newdata = [newfname,newlname,newemail]
+            // let newdataentry = document.createTextNode(newdata)
+            // if(newfname === '' || newlname === '' || newemail ===''){
+            //     alert("Please fill in all the values")
+            // }
+            // else{
+            // li.replaceChild(newdataentry,li.childNodes[0])
+            // }
+            fname.value = data[0]
+            lname.value = data[1]
+            email.value = data[2]
+            btn.onclick = function(){
+                li.remove();
+            }
+ 
     }
 }
