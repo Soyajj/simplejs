@@ -93,3 +93,30 @@ ul{
     color: white;
     text-align: center;
 }
+
+.edit:hover{
+    background-color: seagreen;
+}
+
+.btn{
+    height:35px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: black;
+    border: none;
+    color: white;
+    padding-top: 12px;
+    border-radius: 1em;
+}
+
+.btn::before{
+    content: 'Save';
+}
+
+.btn-remove{
+    display: none;
+}
+
+.btn:hover{
+    background-color: gray;
+}

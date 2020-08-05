@@ -13,8 +13,8 @@ const fname_error = document.querySelector('#fname-error');
 const lname_error = document.querySelector('#lname-error');
 const email_error = document.querySelector('#email-error');
 
+const save = document.querySelector('#save');
 
-// let i = 0;
 
 body.addEventListener('submit' , onsubmit);
 
@@ -40,13 +40,6 @@ function onsubmit(s){
     else{
         add();
     }
-    //     if (i==1){
-    //         users.removeChild(users.lastChild)
-    //     }
-    //     else {
-    //         i=0;
-    //     }
-    // }
 }
 
 
@@ -72,17 +65,19 @@ function add(){
         li.remove();
     };
     edit.onclick = function(){
-            // i=1;
+            btn.classList.toggle('btn-remove')
             fname.value = data[0]
             lname.value = data[1]
             email.value = data[2]
-            // const save = document.createElement('button')
-            // save.appendChild(document.createTextNode('save'));
-            // myform.appendChild(save)
-            btn.onclick = function(){
+            save.classList.toggle('btn');
+            save.onclick = function(){
                 const newdata = document.createTextNode(`${fname.value},${lname.value},${email.value}`);
-                li.remove()
-                // li.replaceChild(newdata,li.childNodes[0]);
+                li.replaceChild(newdata,li.childNodes[0]);
+                save.classList.toggle('btn')
+                fname.value = '';
+                lname.value = '';
+                email.value = '';   
+                btn.classList.toggle('btn-remove')         
             }
     }
 }
