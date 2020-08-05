@@ -1,6 +1,7 @@
 const body = document.querySelector('#body');
 const main = document.querySelector('#main');
 const myform = document.querySelector('#myform')
+const ul = document.querySelector('ul')
 
 const fname = document.querySelector('#fname');
 const lname = document.querySelector('#lname');
@@ -13,6 +14,7 @@ const lname_error = document.querySelector('#lname-error');
 const email_error = document.querySelector('#email-error');
 
 
+// let i = 0;
 
 body.addEventListener('submit' , onsubmit);
 
@@ -38,6 +40,13 @@ function onsubmit(s){
     else{
         add();
     }
+    //     if (i==1){
+    //         users.removeChild(users.lastChild)
+    //     }
+    //     else {
+    //         i=0;
+    //     }
+    // }
 }
 
 
@@ -63,23 +72,17 @@ function add(){
         li.remove();
     };
     edit.onclick = function(){
-            // const newfname = prompt("Enter new firstname")
-            // const newlname = prompt("Enter new lastname")
-            // const newemail = prompt("Enter new email")
-            // let newdata = [newfname,newlname,newemail]
-            // let newdataentry = document.createTextNode(newdata)
-            // if(newfname === '' || newlname === '' || newemail ===''){
-            //     alert("Please fill in all the values")
-            // }
-            // else{
-            // li.replaceChild(newdataentry,li.childNodes[0])
-            // }
+            // i=1;
             fname.value = data[0]
             lname.value = data[1]
             email.value = data[2]
+            // const save = document.createElement('button')
+            // save.appendChild(document.createTextNode('save'));
+            // myform.appendChild(save)
             btn.onclick = function(){
-                li.remove();
+                const newdata = document.createTextNode(`${fname.value},${lname.value},${email.value}`);
+                li.remove()
+                // li.replaceChild(newdata,li.childNodes[0]);
             }
- 
     }
 }
